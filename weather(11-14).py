@@ -32,10 +32,8 @@ if response.status_code == 200:
   print(start_time)
   print(end_time)
   # print(weather_state)
-  # print(rain_prob)
   print(tem_max)
   print(comfort)
-  # print(max_tem)
 
 else:
   print("Can't get data!")
