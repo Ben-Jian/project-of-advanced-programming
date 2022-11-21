@@ -6,7 +6,7 @@ def get_data():
     url = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-027?Authorization=CWB-951FEBBC-DD1C-49B7-83A0-5525A753D11C"
     params = {
         "Authorization": "CWB-951FEBBC-DD1C-49B7-83A0-5525A753D11C",
-        "locationName": "",
+        "locationName": "斗六市",
         # "locationName": "虎尾鎮" also works!!(only shows data of huwei)
     }
 
@@ -19,12 +19,12 @@ def get_data():
         # print(data)
 
         location = data["records"]["locations"][0]["location"][0]["locationName"]
-        rain_prob = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][2]["elementValue"][0]["value"]
+        rain_prob = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][0]["elementValue"][0]["value"]
         weather_state = data["records"]["locations"][0]["location"][0]["weatherElement"][6]["time"][0]["elementValue"][0]["value"]
-        start_time = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][2]["startTime"]
-        end_time = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][2]["endTime"]
+        start_time = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][0]["startTime"]
+        end_time = data["records"]["locations"][0]["location"][0]["weatherElement"][0]["time"][0]["endTime"]
         max_tem = data["records"]["locations"][0]["location"][0]["weatherElement"][12]["time"][0]["elementValue"][0]["value"]
-        comfort = data["records"]["locations"][0]["location"][0]["weatherElement"][7]["time"][0]["elementValue"][1]["value"]
+        comfort = data["records"]["locations"][0]["location"][0]["weatherElement"][3]["time"][0]["elementValue"][1]["value"]
         min_tem = data["records"]["locations"][0]["location"][0]["weatherElement"][8]["time"][0]["elementValue"][0]["value"]
 
         # print(location)
