@@ -16,3 +16,5 @@ https://www.youtube.com/watch?v=fC9wg0DwHKQ
 https://github.com/maso0310/linebot
 
 https://replit.com/@Ben1123/weather#main.py
+
+https://www.youtube.com/watch?v=aqnJvXOIr6g
