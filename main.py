@@ -45,7 +45,6 @@ def get_data():
 
 def line_notify(data):
 
-    # token = "t6eJ17WcGCZ13ZMd9AP6k2hds57HdEqmdZ3yVB1oNuF"  # 傳給ben
     token = "2w0lbjnDXeVXXfxGWJDy7gqcTyGfXluyM4hd5teH4UW"  # 傳給line群組
     message = ""
 
@@ -64,7 +63,7 @@ def line_notify(data):
         elif int(data[5]) < 15:
             message += "提醒您，今天很冷，記得穿暖一點再出門哦~"
 
-        message += f"時間: {data[1]} ~ {data[2]}\n"
+        message += f"時間: {data[1]} ~ {data[2]}"
 
     # line notify所需資料
     line_url = "https://notify-api.line.me/api/notify"
